@@ -40,9 +40,9 @@ cd $DEPLOY_TMP
 #safe repo space by resetting to HEAD~1
 git clone -b gh-pages --single-branch $DEPLOY_REPO gh-pages
 cd $DEPLOY_TMP/gh-pages
-git log
+git log -3
 git reset --hard HEAD~1
-git log
+git log -3
 
 #clean previous stuff and checkin new one
 rm -rf $DEPLOY_TMP/gh-pages/*
